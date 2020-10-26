@@ -8,7 +8,7 @@ build_targets:
     container:
       image: yourbase/yb_ubuntu:18.04
     commands:
-      - mvn -B verify -Pgeoindexing
+      - mvn -B -Drat.numUnapprovedLicenses=100 verify -Pgeoindexing
 ci:
   builds:
     - name: default
